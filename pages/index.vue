@@ -13,102 +13,12 @@
       </button>
     </div>
     <div class="flex snap-x snap-mandatory overflow-x-scroll">
-      <ProductCard v-for="product in products" :product="product"/>
+      <ProductCard @click="navigateTo('/products')" v-for="product in products.newProducts" :product="product"/>
     </div>
   </div>
 </template>
 
 
-<script lang="ts">
-interface IProduct {
-  title: string;
-  price: number;
-  rating?: number;
-  image?: string;
-  brand: string;
-}
-
-const products = {}
-export default {
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          brand: 'Apple',
-          title: 'Product 1',
-          price: 100,
-          image: 'https://picsum.photos/300/300',
-          rating: 4.2,
-        },
-        {
-          id: 2,
-          brand: 'Apple',
-          title: 'Product 2',
-          price: 200,
-          image: 'https://picsum.photos/300/300',
-          rating: 3.9,
-        },
-        {
-          id: 3,
-          brand: 'Apple',
-          title: 'Product 3',
-          price: 300,
-          image: 'https://picsum.photos/300/300',
-          rating: 5,
-        },
-        {
-          id: 4,
-          brand: 'Apple',
-          title: 'Product 4',
-          price: 400,
-          image: 'https://picsum.photos/300/300',
-          rating: 4.1,
-        },
-        {
-          id: 5,
-          brand: 'Apple',
-          title: 'Product 5',
-          price: 500,
-          image: 'https://picsum.photos/300/300',
-        },
-        {
-          id: 6,
-          brand: 'Apple',
-          title: 'Product 6',
-          price: 600,
-          image: 'https://picsum.photos/300/300',
-        },
-        {
-          id: 7,
-          brand: 'Apple',
-          title: 'Product 7',
-          price: 700,
-          image: 'https://picsum.photos/300/300',
-        },
-        {
-          id: 8,
-          brand: 'Apple',
-          title: 'Product 8',
-          price: 800,
-          image: 'https://picsum.photos/300/300',
-        },
-        {
-          id: 9,
-          brand: 'Apple',
-          title: 'Product 9',
-          price: 900,
-          image: 'https://picsum.photos/300/300',
-        },
-        {
-          id: 10,
-          brand: 'Apple',
-          title: 'Product 10',
-          price: 1000,
-          image: 'https://picsum.photos/300/300',
-        },
-      ]
-    }
-  },
-}
+<script setup>
+const products = useProducts();
 </script>
