@@ -1,5 +1,20 @@
+<script setup lang="ts">
+interface IProduct {
+  title: string;
+  price: number;
+  rating?: number;
+  image?: string;
+  brand: string;
+}
+
+const props = defineProps<{
+  product: IProduct;
+}>();
+console.log(props.product)
+</script>
+
 <template>
-  <div class="border border-2 border-gray-200 my-4 mx-4 p-2 rounded-xl w-72 h-auto snap-center">
+  <div class="border border-1 border-gray-200 my-4 mx-4 p-2 rounded-xl w-72 h-auto flex-shrink-0 snap-center">
     <img
         class="aspect-square object-cover"
         src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1661026579503"
@@ -10,9 +25,9 @@
       <div class="mt-4 flex justify-between">
         <!--   left side   -->
         <div>
-          <p class="mt-1 text-sm text-gray-500 font-medium">Apple</p>
+          <p class="mt-1 text-sm text-gray-500 font-medium">{{ product.brand }}</p>
           <h3 class="text-md text-gray-700 font-medium">
-            iPhone 14
+            {{ product.title }}
           </h3>
           <p class="text-sm font-medium text-gray-900 mt-4">
             <span class="text-gray-400">$</span>
@@ -38,7 +53,7 @@
             </svg>
 
             <span class="text-xs ml-1 font-bold">
-              4.7
+              {{ product.rating }}
             </span>
           </div>
         </div>
@@ -46,3 +61,5 @@
     </div>
   </div>
 </template>
+
+
