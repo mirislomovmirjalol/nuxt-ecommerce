@@ -1,15 +1,13 @@
 <template>
   <div>
-    <Navbar/>
-
-    <div class="container mx-auto">
-      <div class="flex flex-nowrap snap-x">
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-      </div>
-    </div>
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
   </div>
 </template>
-<script setup lang="ts">
-</script>
+
+<style>
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+</style>
