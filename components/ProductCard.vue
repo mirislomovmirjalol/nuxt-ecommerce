@@ -43,7 +43,7 @@ const props = defineProps<{
             </svg>
           </div>
 
-          <div v-if="product.rating" class="rounded-3xl bg-gray-200 py-1 px-2 flex">
+          <div v-if="product.rating" class="rounded-3xl bg-gray-100 py-1 px-2 flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                  class="w-4 h-4 text-yellow-500">
               <path fill-rule="evenodd"
