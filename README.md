@@ -1,6 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 ecommerce store web app
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Demo
+
+https://jalol-ecommerce.netlify.app/
+
+### Stacks, libraries:
+
+Nuxt 3, tailwind css, daisyUI(tailwind component library), vite/PWA
 
 ## Setup
 
@@ -38,6 +44,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# nuxt-ecommerce
