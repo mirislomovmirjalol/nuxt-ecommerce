@@ -7,24 +7,71 @@
         srcset=""
     >
     <div class="p-8 ">
-      <p class="mt-1 text-md text-gray-500 font-medium h-screen">
+      <p class="mt-1 text-lg text-gray-500 font-medium">
         Apple
       </p>
-      <h3 class="text-xl text-gray-700 font-medium">
+      <h3 class="text-3xl text-gray-700 font-medium my-2">
         iphone 14
       </h3>
-      <p class="mt-1 text-md text-gray-500 font-medium h-screen">
-        Apple
+
+
+      <!--    rating  -->
+      <div class="flex flex-row justify-between">
+        <div class="rounded-3xl bg-gray-100 py-1 px-2 flex">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+               class="w-4 h-4 text-yellow-500">
+            <path fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                  clip-rule="evenodd"/>
+          </svg>
+          <span class="text-xs ml-1 font-bold">
+              4.5
+            </span>
+        </div>
+      </div>
+
+      <p class="text-gray-500 my-6 ">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s
       </p>
-      <h3 class="text-xl text-gray-700 font-medium">
-        iphone 14
-      </h3>
-      <p class="mt-1 text-md text-gray-500 font-medium h-screen">
-        Apple
-      </p>
-      <h3 class="text-xl text-gray-700 font-medium">
-        iphone 14
-      </h3>
+
+      <div tabindex="0" class="collapse collapse-arrow mb-32 border-y">
+        <input type="checkbox" class="peer"/>
+        <div class="collapse-title text-lg font-medium flex justify-start items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+            <path fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                  clip-rule="evenodd"/>
+          </svg>
+          Product details
+        </div>
+        <div class="collapse-content">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+            containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+            versions
+            of Lorem Ipsum.
+          </p>
+        </div>
+      </div>
+
+      <div
+          class="fixed bottom-0 left-0 flex justify-between items-center py-6 px-10 bg-base-100 border-t border-1 border-gray-300 w-full rounded-t-2xl md:static md:rounded-none">
+        <p class="text-xl font-medium">
+          <span class="text-gray-400">$</span>
+          999
+        </p>
+        <button class="px-6 py-3 rounded-full border border-1 border-gray-300 focus:scale-[0.94] focus:border-primary">
+          Add to cart
+        </button>
+      </div>
     </div>
   </div>
 </template>
