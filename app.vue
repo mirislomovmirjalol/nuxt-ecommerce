@@ -14,7 +14,10 @@
 }
 
 .layout-enter-from,
-.layout-leave-to {
+.layout-leave-to,
+.page-enter-from,
+.page-leave-to {
   @apply blur-xl opacity-0;
 }
 </style>
+
