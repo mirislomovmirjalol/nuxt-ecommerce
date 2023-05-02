@@ -7,6 +7,7 @@ type Product = {
     image: string;
     brand: string;
     rating?: number;
+    description?: string;
 }
 
 export const useProducts = () => {
