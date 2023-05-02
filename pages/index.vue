@@ -15,6 +15,7 @@
     <div class="flex snap-x snap-mandatory overflow-x-scroll">
       <ProductCard @click="navigateTo('/products')" v-for="product in products.newProducts" :product="product"/>
     </div>
+
     <div class="flex flex-row justify-between mx-8 my-4">
       <h1 class="font-medium text-xl">
         Popular Products
