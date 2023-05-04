@@ -5,7 +5,6 @@
           class="md:w-1/2 w-full aspect-square object-cover h-1/2 md:sticky top-0"
           src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-purple?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661027205808"
           alt=""
-          srcset=""
       >
       <div class="p-8 ">
         <p class="mt-1 text-lg text-gray-500 font-medium">
@@ -97,12 +96,19 @@
           </div>
         </div>
 
+        <div class="my-6">
+          <SelectableCards :options="options" @changeOption="changeOption" :selected="selectedOption"/>
+        </div>
+
         <div
             class="fixed bottom-0 left-0 flex justify-between items-center py-6 px-10 bg-base-100 border-t border-1 border-gray-300 w-full rounded-t-2xl md:static md:rounded-none">
-          <p class="text-xl font-medium">
-            <span class="text-gray-400">$</span>
-            799
-          </p>
+          <div class="flex flex-col">
+            <p v-text="options.filter(option => option.id === selectedOption)[0].title"/>
+            <p class="text-xl font-medium">
+              <span class="text-gray-400">$</span>
+              {{ options.filter(option => option.id === selectedOption)[0].price }}
+            </p>
+          </div>
           <button
               class="px-6 py-3 rounded-full border border-1 border-gray-300 focus:scale-[0.94] focus:border-primary">
             Add to cart
@@ -117,13 +123,6 @@
         <h1 class="font-medium text-xl">
           Similar products
         </h1>
-        <button>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-            <path fill-rule="evenodd"
-                  d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                  clip-rule="evenodd"/>
-          </svg>
-        </button>
       </div>
       <div class="flex snap-x snap-mandatory overflow-x-scroll">
         <ProductCard @click="navigateTo('/products')" v-for="product in products.newProducts.reverse()"
@@ -134,7 +133,31 @@
 </template>
 
 <script setup>
+const changeOption = (option) => {
+  selectedOption.value = option;
+};
+
+const selectedOption = ref(1);
+
 const products = useProducts();
+const options = [
+  {
+    id: 1,
+    title: 'Pink',
+    price: 750,
+  },
+  {
+    id: 2,
+    title: 'Midnight',
+    price: 999,
+  },
+  {
+    id: 3,
+    title: 'Starlight',
+    price: 799,
+  },
+];
+
 </script>
 
 <script>
