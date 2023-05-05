@@ -12,5 +12,6 @@ type Product = {
 
 export const useProducts = () => {
     const newProducts = productsData.newProducts
-    return {newProducts}
+    const allProducts = productsData.allProducts
+    return {newProducts, allProducts}
 }
