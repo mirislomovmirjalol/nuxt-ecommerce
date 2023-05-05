@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
-        '@vite-pwa/nuxt'
+        '@vite-pwa/nuxt',
+        '@nuxtjs/supabase',
     ],
     pwa: {
         registerType: 'autoUpdate',
