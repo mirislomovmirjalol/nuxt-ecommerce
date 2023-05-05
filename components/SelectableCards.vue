@@ -10,12 +10,6 @@
         >
           {{ option.title }}
         </h3>
-        <h5 class="font-medium text-md border-t mt-3 flex flex-row">
-          <span class="text-gray-400 mr-2">
-            $
-          </span>
-          {{ option.price }}
-        </h5>
       </div>
     </label>
 
