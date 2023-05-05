@@ -2,7 +2,7 @@
   <div>
     <div class="fixed z-10 top-8 left-8">
       <button
-          @click="navigateTo('/')"
+          @click="goBack()"
           class="bg-gray-200/50 backdrop-blur-sm border border-gray-200 p-2 rounded-full hover:bg-gray-200">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="w-5 h-5">
@@ -13,3 +13,8 @@
     <slot/>
   </div>
 </template>
+
+<script setup>
+const router = useRouter();
+const goBack = () => router.go(-1);
+</script>
