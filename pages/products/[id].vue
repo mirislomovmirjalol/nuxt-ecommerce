@@ -156,6 +156,7 @@
 </template>
 
 <script setup>
+
 const changeOption = (option) => {
   selectedOption.value = option;
 };
