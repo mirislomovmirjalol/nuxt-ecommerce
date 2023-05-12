@@ -5,7 +5,7 @@
     <div class="flex flex-row justify-between mt-12">
       <h5 class="text-xl font-medium text-center">Check your email. We sent confirmation link to {{ email }}</h5>
     </div>
-    <button class="block py-3 px-5 bg-gray-900 text-white rounded-lg my-4" @click="navigateTo('/auth/login')">
+    <button class="block py-3 px-5 bg-gray-900 text-white rounded-lg my-4" @click="navigateToLogin">
       Go to Login
     </button>
   </div>
@@ -14,4 +14,8 @@
 
 <script setup>
 defineProps(['email']);
+
+const navigateToLogin = async () => {
+  await navigateTo('/auth/login');
+};
 </script>
