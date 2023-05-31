@@ -13,7 +13,7 @@
               id="name"
               v-model="name" autocomplete="name"
               class="block w-full rounded-lg py-2.5 px-3 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 border border-1 border-gray-400"
-              name="name" placeholder="example@inbox.com" required
+              name="name" placeholder="John James" required
               type="text">
         </div>
       </div>

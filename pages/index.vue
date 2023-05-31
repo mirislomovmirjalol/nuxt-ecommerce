@@ -21,8 +21,11 @@
           <SkeletonsProductCard/>
           <SkeletonsProductCard/>
         </template>
-        <ProductCard v-for="product in products.newProducts" :product="product"
-                     @click="navigateTo('/products/' + product.id)"/>
+        <ProductCard
+            v-for="product in products.newProducts"
+            :product="product"
+            @click="navigateTo('/products/' + product.id)"
+        />
       </ClientOnly>
 
     </div>
