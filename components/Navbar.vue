@@ -57,9 +57,5 @@
 </template>
 
 <script lang="ts" setup>
-const client = useSupabaseAuthClient()
-const logOut = () => {
-  client.auth.signOut()
-}
 
 </script>
